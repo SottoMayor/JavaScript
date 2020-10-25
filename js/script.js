@@ -1,15 +1,20 @@
 /*
 
-*** Relational Operators ***
+*** Logical Operators ***
 
-== -> equal
-=== -> strictly the same
-!= -> not equal
+0 -> false
+1 -> true
 
-> -> bigger
->= -> bigger or equal
-< -> smaller
-<= -> smaller or equal
+
+! -> not
+
+
+!(0) -> results 1
+!(1) -> results 0
+
+
+&& -> Conjuction AND
+|| -> Disjuction OR
 
 */
 
@@ -17,19 +22,12 @@ var num1;
 var num2;
 
 num1 = 5;
-num2 = '5';
-
-console.log(num1 == num2);
-console.log(num1 === num2);
-
 num2 = 5;
 
-console.log(num1 === num2);
+if(num1 > num2 || num1 == num2){
+    alert('OOOOOOYEAH!')
+}
 
-num1 = 10;
-
-console.log(num1 != num2);
-console.log(num1 >  num2);
-console.log(num1 >= num2);
-console.log(num1 < num2);
-console.log(num1 <= num2);
+if(num1 == num2 && !(num2 == 10)){
+    console.log('We won!')
+}
