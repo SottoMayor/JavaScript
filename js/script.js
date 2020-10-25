@@ -1,12 +1,12 @@
 /*
 
-*** Conditional Statements ***
+*** Adjusted Conditional Statements ***
 
 if(condition){
     expression
-}else if{
+}else if(condition){
     other expression
-}else if{
+}else if(condition){
     another expression
 }
  .
