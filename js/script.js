@@ -1,20 +1,16 @@
 /*
 
-*** Adjusted Conditional Statements ***
+*** Shortened Conditional Statements ***
 
 if(condition){
     expression
-}else if(condition){
-    other expression
-}else if(condition){
-    another expression
-}
- .
- .
- .
 }else{
-    the last expression
+    other expression
 }
+
+becomes....
+
+(condition) ? returnIfIsTrue : returnIfIsFalse
 
 */
 
@@ -24,20 +20,14 @@ var num2;
 num1 = 5;
 num2 = 5;
 
-if(num1 % 2 == 0){
+if(num1 % 2 == 1){
+    alert(num1 + ' is odd!');
+}else{
     alert(num1 + ' is even!');
-}else{
-    alert(num2 + ' is odd!');
 }
 
-weather = 'sunny';
+// becomes...
 
-if(weather == 'cloudy'){
-    console.log('The weather ir cloudy!');
-}else if(weather == 'sunny'){
-    console.log('The weather is sunny!');
-}else{
-    console.log('The weather is rainy!')
-}
+console.log((num1 % 2 == 1) ? num1 + ' is odd!' : num1 + ' is even!');
 
 
