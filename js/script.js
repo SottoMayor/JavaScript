@@ -3,36 +3,43 @@
 Function is a block of code which can be executed as many times as we want.
 We use this for code reuse.
 
-function nameOfFunction(parameters){
-    expression...
+Arrow functions...
+
+var NameofFunction = (parameters) => {
+    expression
 }
 
-nameofFunction(parameters);
+simplified form of write an arrow function, but but it only works if we are 
+only one parameter and a one-line expression... in this form, the one-line expression
+is returned by the function.
 
-We can add return in the function using the word 'return'
+var NameOfFunction = (oneParameter) => one-lineExpression;
+
 
 */
 
-function myFunction(){
-    alert('This is a function executing...');
-}
-
-myFunction();
+// global variable 
+num = 3;
 
 function isOdd(num){
     return (num % 2 == 1) ? num + ' is odd': num + ' is even';
 }
 
-console.log(isOdd(2));
+console.log(isOdd(num));
 
-function sum(a, b){
-    return a + b;
+function isEven(num){
+    //local variable
+    num = 4;
+    return (num % 2 == 0) ? num + ' is even': num + ' is odd';
 }
 
-sum6And7 = sum(6, 7);
-console.log(sum6And7);
+console.log(isEven(num));
 
-function printFunction(){
-    console.log('PRIIIINT');
+var func = () => {
+    alert('hi, I am a arrow function!');
 }
-printFunction();
+func();
+
+
+var quadNumber = (number) => number ** 2;
+console.log(quadNumber(2));
