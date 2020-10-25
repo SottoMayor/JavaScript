@@ -1,20 +1,20 @@
 /*
 
-*** Logical Operators ***
+*** Conditional Statements ***
 
-0 -> false
-1 -> true
-
-
-! -> not
-
-
-!(0) -> results 1
-!(1) -> results 0
-
-
-&& -> Conjuction AND
-|| -> Disjuction OR
+if(condition){
+    expression
+}else if{
+    other expression
+}else if{
+    another expression
+}
+ .
+ .
+ .
+}else{
+    the last expression
+}
 
 */
 
@@ -24,10 +24,20 @@ var num2;
 num1 = 5;
 num2 = 5;
 
-if(num1 > num2 || num1 == num2){
-    alert('OOOOOOYEAH!')
+if(num1 % 2 == 0){
+    alert(num1 + ' is even!');
+}else{
+    alert(num2 + ' is odd!');
 }
 
-if(num1 == num2 && !(num2 == 10)){
-    console.log('We won!')
+weather = 'sunny';
+
+if(weather == 'cloudy'){
+    console.log('The weather ir cloudy!');
+}else if(weather == 'sunny'){
+    console.log('The weather is sunny!');
+}else{
+    console.log('The weather is rainy!')
 }
+
+
