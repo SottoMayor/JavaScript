@@ -1,33 +1,25 @@
-/*
 
-*** Shortened Conditional Statements ***
+var workingDay = 1;
 
-if(condition){
-    expression
-}else{
-    other expression
+switch(workingDay){
+    case 1:
+        alert('Monday... YEAAAAHHH');
+    case 2:
+    case 3:
+        alert('Wednesday... Alright!');
+    case 4:
+    case 5:
+        alert('Working Day!');
+        break;
+
+    case 6:
+    case 7:
+        alert('Weekend... Awesome!');
+        break
+
+    default:
+        alert(workingDay + ' is not a valid day!');
+        break
 }
-
-becomes....
-
-(condition) ? returnIfIsTrue : returnIfIsFalse
-
-*/
-
-var num1;
-var num2;
-
-num1 = 5;
-num2 = 5;
-
-if(num1 % 2 == 1){
-    alert(num1 + ' is odd!');
-}else{
-    alert(num1 + ' is even!');
-}
-
-// becomes...
-
-console.log((num1 % 2 == 1) ? num1 + ' is odd!' : num1 + ' is even!');
 
 
