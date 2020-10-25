@@ -1,41 +1,32 @@
-
-// The variables must be written in camelCase.
-
 /*
-***RULES***
 
-1 - You can not start the name of variable with digits
-2 - You can not use as the name keywords
-3 - do not use   
-3 - do not use spaces in names
-4 - you should not use operators in the names  
+*** Arithmetic Operators ***
 
-***TYPES***
-
-1 - Number
-2 - Strings
-3 - Boolean
-4 - Arrays and Objects
-5 - Empty
-6 - Undefined
-7 - Functions
++ -> adding and merging string
+- -> subtraction
+* -> multypling
+/ -> dividing
+% -> mod operator
+= -> assigning value
++= -> adding and assigning values
+-= -> subtraction and assigning values
+/= -> dividing and assigning values
+*= -> multypling and assigning values
+%= -> mod operator and assigning values
+++ -> incrementation - increase the value by 1
+-- -> decrementation - decrease the value by 1
 
 */
 
+var num1;
+var num2;
 
+num1 = 10;
+num2 = 5;
 
-var shoes;
-var pants = 50;
-var tShirt = 20;
-var swimSuit;
+console.log(num1 % num2);
 
-shoes = 30 * 3;
-tShirt= 26;
-swimSuit= 15 + 3;
-
-var total =shoes + pants +  tShirt + swimSuit
-
-alert('total price: $' + total);
-
-var myName = 'David';
-console.log(myName);
+console.log(num1 += num2);
+console.log(num1 -= num2);
+console.log(num1 /= num2);
+console.log(num1 *= num2);
