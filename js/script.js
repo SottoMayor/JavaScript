@@ -1,32 +1,35 @@
 /*
 
-*** Arithmetic Operators ***
+*** Relational Operators ***
 
-+ -> adding and merging string
-- -> subtraction
-* -> multypling
-/ -> dividing
-% -> mod operator
-= -> assigning value
-+= -> adding and assigning values
--= -> subtraction and assigning values
-/= -> dividing and assigning values
-*= -> multypling and assigning values
-%= -> mod operator and assigning values
-++ -> incrementation - increase the value by 1
--- -> decrementation - decrease the value by 1
+== -> equal
+=== -> strictly the same
+!= -> not equal
+
+> -> bigger
+>= -> bigger or equal
+< -> smaller
+<= -> smaller or equal
 
 */
 
 var num1;
 var num2;
 
-num1 = 10;
+num1 = 5;
+num2 = '5';
+
+console.log(num1 == num2);
+console.log(num1 === num2);
+
 num2 = 5;
 
-console.log(num1 % num2);
+console.log(num1 === num2);
 
-console.log(num1 += num2);
-console.log(num1 -= num2);
-console.log(num1 /= num2);
-console.log(num1 *= num2);
+num1 = 10;
+
+console.log(num1 != num2);
+console.log(num1 >  num2);
+console.log(num1 >= num2);
+console.log(num1 < num2);
+console.log(num1 <= num2);
