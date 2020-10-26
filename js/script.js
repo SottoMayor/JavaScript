@@ -6,11 +6,13 @@ querySelectorAll() - selecting all possible occurrences of query and returning t
 
 */
 
-var test = document.querySelectorAll('#test li:nth-of-type(2)');
+var li = document.querySelectorAll('li');
 
-// this index checks the position of the item in the array!
-alert(test[0].innerHTML);
+li[5].style.color = 'orange';
 
+liTest = document.querySelectorAll('#test li');
 
-var newTest = document.querySelector('#test li');
-alert(newTest.innerHTML);
+for (var index in liTest){
+    li[index].style.color = 'red';
+}
+
