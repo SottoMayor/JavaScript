@@ -1,32 +1,27 @@
 /*
 
-Function is a block of code which can be executed as many times as we want.
-We use this for code reuse.
+Objects are containers for storing variables and functions(methods).
 
-Functions in the functions
-function name1(parameters){
-    ....
+var object = {
+    name1 : blabla,
+    name2 : bleble,
+    name3 : blibli,
+    name4 : blublu,
+    nameOfFunction : function(){
+        expression...
+    }
 }
-
-function name2(parameters){
-    ... name1(parameters) ....
-}
-
 
 */
 
-var isOdd = num => (num % 2 == 1) ? true : false;
-
-var sentence = (num) => {
-    // we want check if the number is odd, so we will use the isOdd(num) function!
-
-    if(isOdd(num)){
-        alert(num + ' is odd!');
-    }else{
-        alert(num + ' is even!')
+var person = {
+    name : 'David',
+    surname : 'Sotto Mayor',
+    age : 20,
+    addInformations: function() {
+        return this.name + ' ' + this.surname + ' ' + this.age + ' years.'
     }
-
 }
 
-sentence(5);
-sentence(6);
+person.isAdult = true;
+person.name = 'Fulano';
