@@ -1,55 +1,49 @@
 /*
 
-Objects are containers for storing variables and functions(methods).
+Arrays are series of values that are next to each other. The index indicates the position of 
+the item in the array and it starts at zero.
 
-Classes and Methods...
+array = [item1, item2, ..., itemN];
+
+get an item by index....
+array[n] = [itemN];
+
+length of the array...
+array.length
+
+add items in the array...
+array[array.length] = newItem
+array.push('newItem')
+
+replacing items in the array...
+array[i] = itemI, so array[i] = itemZ
+
+KeyValues array...
+
+array = [];
+array[key1] = value1;
+array[key2] = value2;
+.
+.
+.
+array[keyN] = valueN;
 
 */
 
-class Person{
+var supermarket = ['milk', 'coffee', 'bread', 'cheese', 'ham'];
 
-    // constructor
-    name = 'unknow';
-    surname = 'unknow';
-    age = 'unknow';
+console.log(supermarket[3]); // cheese!
 
-    // methods
+supermarket[supermarket.length] = 'apple';
+supermarket.push('banana');
+console.log(supermarket);
 
-    printName = () => {
-        console.log(this.name);
-    }
+supermarket[2] = 'grape';
+console.log(supermarket);
 
-    setName = (newName) => {
-        this.name = newName;
-    }
-
-    printSurname = () => {
-        console.log(this.surname);
-    }
-
-    setSurname = (newSurname) => {
-        this.surname = newSurname;
-    }
-
-    printAge = () => {
-        console.log(this.age);
-    }
-
-    setAge = (newAge) => {
-        this.age = newAge;
-    }
-
-}
-
-David = new Person();
-David.printName();
-David.printSurname();
-David.printAge();
-
-David.setName('David');
-David.setSurname('Sotto Mayor');
-David.setAge(20);
-David.printName();
-David.printSurname();
-David.printAge();
+person = [];
+person['name'] = 'David';
+person['surname'] = 'Sotto Mayor';
+person['age'] = 20;
+console.log(person);
 
