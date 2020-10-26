@@ -2,26 +2,54 @@
 
 Objects are containers for storing variables and functions(methods).
 
-var object = {
-    name1 : blabla,
-    name2 : bleble,
-    name3 : blibli,
-    name4 : blublu,
-    nameOfFunction : function(){
-        expression...
-    }
-}
+Classes and Methods...
 
 */
 
-var person = {
-    name : 'David',
-    surname : 'Sotto Mayor',
-    age : 20,
-    addInformations: function() {
-        return this.name + ' ' + this.surname + ' ' + this.age + ' years.'
+class Person{
+
+    // constructor
+    name = 'unknow';
+    surname = 'unknow';
+    age = 'unknow';
+
+    // methods
+
+    printName = () => {
+        console.log(this.name);
     }
+
+    setName = (newName) => {
+        this.name = newName;
+    }
+
+    printSurname = () => {
+        console.log(this.surname);
+    }
+
+    setSurname = (newSurname) => {
+        this.surname = newSurname;
+    }
+
+    printAge = () => {
+        console.log(this.age);
+    }
+
+    setAge = (newAge) => {
+        this.age = newAge;
+    }
+
 }
 
-person.isAdult = true;
-person.name = 'Fulano';
+David = new Person();
+David.printName();
+David.printSurname();
+David.printAge();
+
+David.setName('David');
+David.setSurname('Sotto Mayor');
+David.setAge(20);
+David.printName();
+David.printSurname();
+David.printAge();
+
