@@ -1,26 +1,14 @@
-/*
+function addNumbers() {
 
-Loops are used when we would like to perform the same task several times.
+    var sum = 0;
 
-for-in
+    for(var index in arguments){
+        sum += arguments[index];
+    }
 
-for (var nameOfVariable in array){
-    expression...
+    return sum;
+
 }
 
-In this loop, the iterations has the same lenght that the array or object.
+console.log(addNumbers(4, 5, 6));
 
-*/
-
-
-
-var person = {
-    name : 'David',
-    surname : 'Sotto Mayor',
-    age : '20'
-}
-
-for (var atributes in person){
-    console.log(atributes);
-    console.log(person[atributes]);
-}
