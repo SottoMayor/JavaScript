@@ -14,41 +14,26 @@ while(stop condition){
 
 While looping through arrays...
 
-while(stop condition){
+for(cont = number; stop condition; cont incrementation){
+    .
+    .
     expression
     .
     .
-    array[cont]
-    .
-    .
-
-    cont expression
 }
-
-do - while -> First works the expression and after checks the stop condition
-
-do{
-    expression
-}while(expression);
-
 
 */
 
-var supermarket = ['milk', 'coffee', 'bread', 'cheese', 'ham'];
 
-cont = 0;
 
-while(cont < supermarket.length){
-    console.log(supermarket[cont]);
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    cont++;
+for(i = 0; i < numbers.length; i++){
+    if ( numbers[i] % 2 == 0 ){
+        console.log(numbers[i] + ' is even!')
+    }else{
+        console.log(numbers[i] + ' is odd!')   
+    }
 }
-
-
-do{
-    console.log(cont);
-    
-    cont++;
-}while(cont < 5);
 
 
