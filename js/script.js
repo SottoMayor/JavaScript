@@ -1,14 +1,16 @@
-function addNumbers() {
+/*
 
-    var sum = 0;
+querySelector() - selecting the first occurrence of query and returning it as single variable
 
-    for(var index in arguments){
-        sum += arguments[index];
-    }
+querySelectorAll() - selecting all possible occurrences of query and returning the array 
 
-    return sum;
+*/
 
-}
+var test = document.querySelectorAll('#test li:nth-of-type(2)');
 
-console.log(addNumbers(4, 5, 6));
+// this index checks the position of the item in the array!
+alert(test[0].innerHTML);
 
+
+var newTest = document.querySelector('#test li');
+alert(newTest.innerHTML);
