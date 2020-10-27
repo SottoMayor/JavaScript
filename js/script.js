@@ -1,33 +1,37 @@
-/*
+/* 
 
-How to add and remove DOM elements
+Events are make websites dynamic, things that happens on your website!
 
-createElement('nameOfTag')
+How works...
 
-appendChild
+element.event = function(){
+    expression...
+}
 
-removeChild
+or 
 
-nameOfVar.parentNode.removeChild(nameOfVar)
+function nameOfFunction(paramaters){
+    expression...
+}
+
+element.event = function(){
+    nameOfFunction(parameters)
+} 
 
 */
 
-var doc = document.querySelector('body');
+var result = document.getElementById('result');
 
-var p = document.createElement('p');
-p.style.color = 'green';
-p.className = 'myP';
-p.innerHTML = 'My Text Here';
-p.style.fontSize = '30px'
+result.onmouseover = function(){
+    alert('Mouse On!')
+}
 
-doc.appendChild(p);
+var hello  = document.getElementById('hello');
 
-//to remove...
+function execute(args){
+    alert('Hello World from ' + args);
+}
 
-//this form
-var removeList0 = document.querySelector('#test0').remove();
-
-//or this form
-var removeList = document.querySelector('#test');
-
-removeList.parentNode.removeChild(removeList);
+hello.onmouseleave = function(){
+    execute('David');
+};
