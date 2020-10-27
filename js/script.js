@@ -1,20 +1,26 @@
 /* 
 
-Events are make websites dynamic, things that happens on your website!
+the window.onload is used when we would like initialize the JS code only our page or website is
+totally load!
 
-How works... another form...
-
-function nameOfFunction(){
-    expression...
+window.onload() = function{
+    'synchronous' code...
 }
 
-element.event = nameOfFunction;
+'asynchronous' code....
 
-this - this world indicates a generical element that the event will trigger
 
 */
 
-var result = document.getElementById('result');
+window.onload = function(){
+
+    var result = document.getElementById('result');
+
+    result.onmouseenter = changeColor;
+    result.onmouseleave = originalColor;
+
+}
+
 
 function changeColor(){
     this.style.backgroundColor = '#444';
@@ -26,6 +32,3 @@ function originalColor(){
     this.style.backgroundColor = '#aaa';
     this.style.color = 'black';
 }
-
-result.onmouseenter = changeColor;
-result.onmouseleave = originalColor;
