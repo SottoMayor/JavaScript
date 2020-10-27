@@ -2,36 +2,30 @@
 
 Events are make websites dynamic, things that happens on your website!
 
-How works...
+How works... another form...
 
-element.event = function(){
+function nameOfFunction(){
     expression...
 }
 
-or 
+element.event = nameOfFunction;
 
-function nameOfFunction(paramaters){
-    expression...
-}
-
-element.event = function(){
-    nameOfFunction(parameters)
-} 
+this - this world indicates a generical element that the event will trigger
 
 */
 
 var result = document.getElementById('result');
 
-result.onmouseover = function(){
-    alert('Mouse On!')
+function changeColor(){
+    this.style.backgroundColor = '#444';
+    this.style.color = 'white';
+    this.style.transition= '0.7s';
 }
 
-var hello  = document.getElementById('hello');
-
-function execute(args){
-    alert('Hello World from ' + args);
+function originalColor(){
+    this.style.backgroundColor = '#aaa';
+    this.style.color = 'black';
 }
 
-hello.onmouseleave = function(){
-    execute('David');
-};
+result.onmouseenter = changeColor;
+result.onmouseleave = originalColor;
