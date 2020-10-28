@@ -1,19 +1,29 @@
 /*
 
-window.pageYOffset
 
-window.scrollBy(xaxis, yaxis)
 
 */
 
 window.onload = function(){
 
-    var toTopButton = document.getElementById('toTopButton');
+    var box = document.getElementById('box');
 
-    toTopButton.onclick = function(){
+    box.onmousedown = function(){
 
-        window.scrollBy(0, -1 * window.pageYOffset);
+        this.onmousemove = function(event){
 
+            this.style.left = event.clientX + 'px';
+            this.style.top = event.clientY + 'px';
+
+        }
+    }
+
+    box.onmouseup = function(){
+        this.onmousemove = null;
+    }
+
+    box.ondragstart = function(event){
+        event.preventDefault();
     }
 
 }
