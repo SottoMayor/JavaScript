@@ -1,49 +1,19 @@
 /*
 
-Prevent Default... 
+window.pageYOffset
+
+window.scrollBy(xaxis, yaxis)
 
 */
 
 window.onload = function(){
 
-    var email = document.getElementById('email');
+    var toTopButton = document.getElementById('toTopButton');
 
-    var btnSubmit = document.querySelector('#btn-submit');
+    toTopButton.onclick = function(){
 
-    btnSubmit.onclick = function(event){
-
-        var event = event || window.event;
-
-        if(event.preventDefault){
-            event.preventDefault()
-        }else{
-            event.returnValue = false;
-        }
-
-
-        var form = document.getElementById('form');
-
-        var tmp = document.getElementById('tmp');
-
-        if (email.value == 'Some valid Email...'){
-            form.submit();
-        }else{
-            tmp.innerHTML = 'The email is invalid!'
-        }
-
-        btnSubmit.oncontextmenu = function(event){
-
-            var event = event || window.event;
-
-            if(event.preventDefault){
-                event.preventDefault()
-            }else{
-                event.returnValue = false;
-            }
-
-        }
+        window.scrollBy(0, -1 * window.pageYOffset);
 
     }
-
 
 }
