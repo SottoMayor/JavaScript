@@ -1,29 +1,36 @@
 /*
 
+setTimeOut(function, milliseconds) - function will be run once
 
+setInterval(function, milliseconds) - function will be run many times in intervals
+
+clearTimeOut - stop the function that was gonna be initializate by setTimeOut
+
+clearInterval - stop the interval of setInterval function.
 
 */
 
 window.onload = function(){
 
-    var box = document.getElementById('box');
+    var btn = document.getElementById('btn');
 
-    box.onmousedown = function(){
-
-        this.onmousemove = function(event){
-
-            this.style.left = event.clientX + 'px';
-            this.style.top = event.clientY + 'px';
-
-        }
+    btn.onclick = function(){
+        myFunction();
     }
 
-    box.onmouseup = function(){
-        this.onmousemove = null;
-    }
+    var btn1 = document.getElementById('btn1');
 
-    box.ondragstart = function(event){
-        event.preventDefault();
+    btn1.onclick = function(){
+        func();
     }
+    
 
+}
+
+function myFunction() {
+    setTimeout(function(){ alert("Hello"); }, 3000);
+  }
+
+function func() {
+    setInterval(function(){ alert("Hello"); }, 3000);
 }
