@@ -1,25 +1,19 @@
 /*
 
-Dialog Window
-
-1 - alert
-2 - confirm
-3 - prompt
+location....
 
 */ 
 
 window.onload = function() {
 
-    var username = prompt('What is your name?', 'Username');
+    var google = document.getElementById('google');
 
-    if(username != null){
-        alert('Hello ' + username + ' how is going?')
-    }
+    google.onclick = function(event){
 
-    var cancelAccount = confirm('Are sure about deleting you account?');
-    
-    if(cancelAccount){
-        alert('Bye Bye... :(');
+        event.preventDefault();
+
+        window.location = this.getAttribute('href')
+
     }
 
 };
