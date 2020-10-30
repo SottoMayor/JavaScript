@@ -1,83 +1,41 @@
-/*    Cookies - cookies are containers that can store
-                key=value1;key2=value2;
+/*
 
-              values like that are available to us even if the user leave our website
-              when the user visits your website again this value is still gonna be there
-              because of it we can identify the person visiting us
+Math.round() - round the number to the nerest integer
+Math.ceil() - round always to up
+Math.floor() - round always to down
+toFixed() - How many numbers after the dot
 
-              path=/
-              expires= - when the cookie expires (default when you close the session) (toUTCString() format)
-              max-age= - how old can the cookie be in seconds (not supported in ie6-8)
+Math.abs() - absolute value
+Math.pow(x, y) - x to the power y
 
-              localstorage - for local              
+parseInt
+parseFloat
+type of
+
+Math.random() - returns random value from 0 to 1
 */
 
+var info = document.getElementById('info');
 
-function newCookie(name, value, days) {
+var x = 2.4911;
 
-  var expirationDate = ''
-  if (days){
-    var expirationDateOfCookie = new Date();
-    expirationDateOfCookie.setDate(expirationDateOfCookie.setDate() + days);
-    expirationDate = ';expires=' + expirationDateOfCookie.toUTCString();
-  }
-  
+console.log(Math.round(x, 2));
+console.log(Math.ceil(x));
+console.log(Math.floor(x));
+console.log(x.toFixed(3));
 
-  document.cookie = name + '=' + encodeURIComponent(value) + expirationDate + ';path=/';
+a = 5
+b = -5
 
-}
+console.log(Math.abs(a), Math.abs(b));
 
-function byeCookie(name){
+console.log(Math.pow(a, b));
 
-  var expirationDateOfCookie = new Date();
-  document.cookie = name + '=;expiress=' + expirationDateOfCookie.toUTCString()+'path=/'
+var crazyVar = '3.1415DavizaoHu3Br';
 
-}
+console.log(parseInt(crazyVar));
+console.log(parseFloat(crazyVar));
 
-function getCookieByName(name) {
+console.log(Math.random());
 
-  var arrayCookies = document.cookie.split('; ');
-
-  for(var i = 0; i < arrayCookies.length; i++){
-
-    var splittedCookie = arrayCookies[i].split('=');
-
-    return (name === splittedCookie[0]) ? decodeURIComponent(splittedCookie[1]) : console.log('not found...');
-
-  }
-
-}
-
-
-window.onload = function(){
-
-  var createCookie = document.getElementById('createCookie');
-  var removeCookie = document.getElementById('removeCookie');
-  var info = document.getElementById('info');
-
-  createCookie.onclick = function() {
-    
-    newCookie('name', 'David', 1);
-    newCookie('surname', 'Sotto Mayor');
-    newCookie('age', 20);
-
-    getCookieByName('name');
-    getCookieByName('age');
-    getCookieByName('major');
-
-  };
-
-  removeCookie.onclick = function() {
-
-    byeCookie('age');
-
-  };
-
-};
-
-
-
-
-
-
-
+info.innerHTML = x;
