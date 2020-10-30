@@ -19,11 +19,18 @@ function newCookie(name, value, days) {
   if (days){
     var expirationDateOfCookie = newDate();
     expirationDateOfCookie.setDate(expirationDateOfCookie.setDate() + days);
-    expirationDate = ';expires=' + expirationDateOfCookie.toUTString();
+    expirationDate = ';expires=' + expirationDateOfCookie.toUTCString();
   }
   
 
   document.cookie = name + '=' + value + expirationDate + ';path=/';
+
+}
+
+function byeCookie(name){
+
+  var expirationDateOfCookie = new Date();
+  document.cookie = name + '=;expiress=' + expirationDateOfCookie.toUTCString()+'path=/'
 
 }
 
@@ -38,14 +45,13 @@ window.onload = function(){
     
     newCookie('name', 'David', 1);
     newCookie('surname', 'Sotto Mayor');
-    
+    newCookie('age', 20);
+
   };
 
   removeCookie.onclick = function() {
 
-    var expirationDateOfCookie = new Date();
-
-    document.cookie = 'surname=;expiress='+expirationDateOfCookie.getTime()+';path=/';
+    byeCookie('age');
 
   };
 
