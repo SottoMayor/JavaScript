@@ -17,13 +17,13 @@ function newCookie(name, value, days) {
 
   var expirationDate = ''
   if (days){
-    var expirationDateOfCookie = newDate();
+    var expirationDateOfCookie = new Date();
     expirationDateOfCookie.setDate(expirationDateOfCookie.setDate() + days);
     expirationDate = ';expires=' + expirationDateOfCookie.toUTCString();
   }
   
 
-  document.cookie = name + '=' + value + expirationDate + ';path=/';
+  document.cookie = name + '=' + encodeURIComponent(value) + expirationDate + ';path=/';
 
 }
 
@@ -31,6 +31,20 @@ function byeCookie(name){
 
   var expirationDateOfCookie = new Date();
   document.cookie = name + '=;expiress=' + expirationDateOfCookie.toUTCString()+'path=/'
+
+}
+
+function getCookieByName(name) {
+
+  var arrayCookies = document.cookie.split('; ');
+
+  for(var i = 0; i < arrayCookies.length; i++){
+
+    var splittedCookie = arrayCookies[i].split('=');
+
+    return (name === splittedCookie[0]) ? decodeURIComponent(splittedCookie[1]) : console.log('not found...');
+
+  }
 
 }
 
@@ -46,6 +60,10 @@ window.onload = function(){
     newCookie('name', 'David', 1);
     newCookie('surname', 'Sotto Mayor');
     newCookie('age', 20);
+
+    getCookieByName('name');
+    getCookieByName('age');
+    getCookieByName('major');
 
   };
 
