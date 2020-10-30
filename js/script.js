@@ -13,6 +13,21 @@
 */
 
 
+function newCookie(name, value, days) {
+
+  var expirationDate = ''
+  if (days){
+    var expirationDateOfCookie = newDate();
+    expirationDateOfCookie.setDate(expirationDateOfCookie.setDate() + days);
+    expirationDate = ';expires=' + expirationDateOfCookie.toUTString();
+  }
+  
+
+  document.cookie = name + '=' + value + expirationDate + ';path=/';
+
+}
+
+
 window.onload = function(){
 
   var createCookie = document.getElementById('createCookie');
@@ -20,13 +35,10 @@ window.onload = function(){
   var info = document.getElementById('info');
 
   createCookie.onclick = function() {
-
-    document.cookie = 'name=David;max-age='+60*60*24+';path=/';
-    document.cookie = 'surname=Sotto Mayor;path=/';
-
-    var expirationDateOfCookie = new Date();
-    expirationDateOfCookie.setTime(expirationDateOfCookie.getTime() + 1000 * 60 * 60);
-
+    
+    newCookie('name', 'David', 1);
+    newCookie('surname', 'Sotto Mayor');
+    
   };
 
   removeCookie.onclick = function() {
